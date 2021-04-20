@@ -1,3 +1,7 @@
+.spacer {
+    width: 50%;
+}
+
 .entryForm__text {
     overflow: auto;
     resize: both;
@@ -8,6 +12,8 @@
     flex-flow: column;
 }
 
-.spacer {
-    width: 50%;
+.note {
+    display: flex;
+    flex-flow: column;
+    padding: 1.5rem;
 }
