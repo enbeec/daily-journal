@@ -1,0 +1,13 @@
+.entryForm__text {
+    overflow: auto;
+    resize: both;
+}
+
+.fieldContainer {
+    display: flex;
+    flex-flow: column;
+}
+
+.spacer {
+    width: 50%;
+}
