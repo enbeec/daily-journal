@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./styles/main.css">
 		<title>Daily Journal</title>
 	</head>
 	<body>
@@ -10,9 +11,31 @@
 			<h1>Daily Journal</h1> by Val Currie
 		</header>
 
-		<article class="container">
-			<section class="capture">
-
+		<main class="container">
+			<section class="entry">
+				<form class="entryForm" action="">
+					<fieldset>
+						<label for="entryDate">Date</label>
+						<input type="date" name="entryDate" class="entryForm__date">
+					</fieldset>
+					<fieldset>
+						<label for="entryConcepts">Concepts Covered</label>
+						<input type="text" name="entryConcepts" class="entryForm__concepts">
+					</fieldset>
+					<fieldset>
+						<label for="entryText">Journal Entry</label>
+						<input type="textarea" name="entryText" class="entryForm__text">
+					</fieldset>
+					<fieldset>
+						<label for="entryMood">Mood for the Day</label>
+						<select name="entryMood" class="entryForm__mood">
+							<option value="Bad" >Bad</option>
+							<option value="Good">Good</option>
+							<option value="Neutral" selected>Neutral</option>
+							<option value="Confused">Confused</option> 
+						</select>
+					</fieldset>
+				</form>
 			</section>
 
 			<section class="display">
@@ -22,11 +45,10 @@
 			<aside class="search">
 
 			</aside>
-		</article>
+		</main>
 
 		<footer class="pageFooter">
 			<a href="https://github.com/enbeec">My GitHub</a>
-
 		</footer>
 	</body>
 </html>
