@@ -2,6 +2,18 @@
     width: 50%;
 }
 
+.centered {
+    text-align: center;
+}
+
+.bottomSpace {
+    margin-bottom: 1rem;
+}
+
+.moreBottomSpace {
+    margin-bottom: 2.5rem;
+}
+
 .entryForm__text {
     overflow: auto;
     resize: both;
