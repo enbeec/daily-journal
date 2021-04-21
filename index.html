@@ -11,7 +11,7 @@
 	<title>Daily Journal</title>
 </head>
 
-<body class="w3-theme-light">
+<body class="w3-theme-dark || w3-theme-light">
 	<header class="pageHeader w3-container centered bottomSpace">
 		Val Currie's
 		<h1>Daily Journal</h1>
@@ -20,7 +20,7 @@
 
 	<main class="container w3-container">
 		<section class="entry">
-			<form class="entryForm w3-container" action="">
+			<form class="entryForm w3-card w3-container" action="">
 				<fieldset class="fieldContainer w3-border-theme bottomSpace">
 					<label for="entryDate">
 						Date
@@ -68,7 +68,15 @@
 	<footer class="pageFooter w3-container centered">
 		Hey, mom and dad! Love you guys <3 </br>
 		<a href="https://github.com/enbeec">My GitHub</a>
+		<button class="darkToggle">Toggle Dark Mode</button>
 	</footer>
+
+	<script>
+		const darkToggle = document.querySelector('.darkToggle');
+		darkToggle.addEventListener('click', function() {
+			document.body.classList.toggle('w3-theme-dark');
+		})
+	</script>
 </body>
 
 </html>
