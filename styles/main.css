@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.pageHeader {
+    padding-top: 1.5rem;
+}
+
 .bottomSpace {
     margin-bottom: 1rem;
 }
@@ -28,4 +32,16 @@
     display: flex;
     flex-flow: column;
     padding: 1.5rem;
+    margin: auto;
+    /* probably should move these to a parent of note */
+    max-width: 30%;
+    flex-basis: 30%;
+    flex-grow: 1;
+    margin: 1rem;    
+}
+
+.noteList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
