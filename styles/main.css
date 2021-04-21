@@ -46,16 +46,18 @@
     justify-content: space-between;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 962px) {
 	.noteList {
 		flex-direction: column;
 	}
 	.note {
-		margin-left: 1%;
-		max-width: 87%
+		margin-left: 2%;
+		margin-right: 2%;
+		max-width: 95%
 	}
 	.entry {
-		max-width: 87%;
-		margin-left: 1%;
+		max-width: 82%;
+		margin-left: 3%;
+		margin-right: 3%;
 	}
 }
