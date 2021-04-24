@@ -29,6 +29,10 @@
     margin-bottom: 2.5rem;
 }
 
+.entryForm {
+    padding-top: 1rem;
+}
+
 .entryForm__text {
     overflow: auto;
     resize: both;
