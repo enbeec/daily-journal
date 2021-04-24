@@ -10,5 +10,6 @@ export const DailyJournal = () => {
         <div class="noteList">
             ${ Entries() }
         </div>
+		<aside class="search w3-container"></aside>
     `
 }
