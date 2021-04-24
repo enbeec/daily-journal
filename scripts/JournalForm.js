@@ -1,5 +1,5 @@
 export const JournalForm = () => {
-    return `
+    return /*html*/`
     <fieldset class="fieldContainer w3-border-theme bottomSpace">
         <label for="entryDate">
             Date

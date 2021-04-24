@@ -6,7 +6,7 @@ export const Entries = () => {
     let allEntriesAsHTML = "";
 
     for (const entry of entries) {
-        allEntriesAsHTML += `
+        allEntriesAsHTML += /*html*/`
             <div class="w3-card w3-text-theme w3-hover-theme note">
                 <div>
                     <span><b>Subject: </b></span>
