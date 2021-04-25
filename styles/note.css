@@ -1,0 +1,34 @@
+.note__header--light {
+    color: #3f51b5;
+}
+
+.note:hover .note__header--light {
+    color: white;
+}
+
+.note:active .note__header--light {
+    color: white;
+}
+
+.note__header--dark {
+    color: white;
+}
+
+
+.note {
+    display: flex;
+    flex-flow: column;
+    padding: 1.5rem;
+    margin: auto;
+    /* probably should move these to a parent of note */
+    max-width: 30%;
+    flex-basis: 30%;
+    flex-grow: 1;
+    margin: 1rem;    
+}
+
+.noteList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
