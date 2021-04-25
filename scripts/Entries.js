@@ -6,12 +6,13 @@ export const Entries = () => {
     let allEntriesAsHTML = "";
 
     for (const entry of entries) {
-        allEntriesAsHTML += `
+        // note__header note__header--dark || note__header--light
+        allEntriesAsHTML += /*html*/`
             <div class="w3-card w3-text-theme w3-hover-theme note">
-                <div>
+                <h6 class="note__header--dark || note__header--light note__header" style="text-align: center;">
                     <span><b>Subject: </b></span>
                     <span><u>${entry.subject}</u></span>
-                </div>
+                </h6>
                 <span>${entry.text}</span>
                 <span><i>I felt ${entry.feeling}.</i></span>
                 <span>It took: ${entry.timeSpent} minutes</span>

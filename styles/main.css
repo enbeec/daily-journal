@@ -6,8 +6,19 @@
     text-align: center;
 }
 
+.flexContainer {
+    display: flex;
+    flex-flow: column;
+}
+
 .pageHeader {
     padding-top: 1.5rem;
+    text-align: center;
+}
+
+.pageFooter {
+    padding-bottom: 1rem;
+    text-align: center;
 }
 
 .bottomSpace {
@@ -16,6 +27,10 @@
 
 .moreBottomSpace {
     margin-bottom: 2.5rem;
+}
+
+.entryForm {
+    padding-top: 1rem;
 }
 
 .entryForm__text {
@@ -27,6 +42,26 @@
     display: flex;
     flex-flow: column;
 }
+
+.note__header--light {
+    color: #3f51b5;
+}
+
+.note:hover .note__header--light {
+    color: white;
+}
+
+.note:active .note__header--light {
+    color: white;
+}
+
+.note__header--dark {
+    color: white;
+}
+
+/* h6.note__header {
+    color: #FFFFFF;
+} */
 
 .note {
     display: flex;
@@ -46,16 +81,18 @@
     justify-content: space-between;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 962px) {
 	.noteList {
 		flex-direction: column;
 	}
 	.note {
-		margin-left: 1%;
-		max-width: 87%
+		margin-left: 2%;
+		margin-right: 2%;
+		max-width: 95%
 	}
 	.entry {
-		max-width: 87%;
-		margin-left: 1%;
+		max-width: 82%;
+		margin-left: 3%;
+		margin-right: 3%;
 	}
 }
