@@ -1,5 +1,5 @@
 const database = {
-    entries: []
+    entries: [],
 }
 
 export const fetchData = () => {
@@ -13,13 +13,14 @@ export const fetchData = () => {
         .then(res => res.json()) // QUESTION: parse as JSON?
         .then(entries => {
             database.entries = entries
-            console.log("fetch:")
-            console.log(database.entries)
+            document.dispatchEvent(new CustomEvent("stateChanged"))
         })
 }
 
+export const getForm = () => {
+    return [...database.form]
+}
+
 export const getEntries = () => {
-    console.log("access:")
-    console.log(database.entries)
     return [...database.entries]
 }
