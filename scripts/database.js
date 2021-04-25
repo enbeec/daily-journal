@@ -26,7 +26,7 @@ const database = {
         },
         {
             id: 4,
-            subject: "<a>[https://www.wintellect.com/data-binding-pure-javascript/](pure JavaScript data binding)</a>",
+            subject: "<a target=\"_blank\" href=\"https://www.wintellect.com/data-binding-pure-javascript/\">pure JavaScript data binding</a>",
             text: "I should take a look at modern farm and see where would be a good place to try something like this... picking the right module in the data flow would avoid the issues mentioned in the last paragraph.",
             date: "April 21, 2021",
             feeling: "happy",
