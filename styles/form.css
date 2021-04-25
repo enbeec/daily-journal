@@ -1,0 +1,13 @@
+.entryForm {
+    padding-top: 1rem;
+}
+
+.entryForm__text {
+    overflow: auto;
+    resize: both;
+}
+
+.fieldContainer {
+    display: flex;
+    flex-flow: column;
+}

@@ -1,9 +1,15 @@
 import { Entries } from './Entries.js'
+import { JournalForm } from './JournalForm.js'
 
 export const DailyJournal = () => {
-    return `
+    return /*html*/`
+		<form class="entryForm w3-card w3-container" action="">
+            ${ JournalForm() }
+		</form>
+
         <div class="noteList">
             ${ Entries() }
         </div>
+		<aside class="search w3-container"></aside>
     `
 }
