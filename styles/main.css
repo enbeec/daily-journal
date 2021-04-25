@@ -43,6 +43,26 @@
     flex-flow: column;
 }
 
+.note__header--light {
+    color: #3f51b5;
+}
+
+.note:hover .note__header--light {
+    color: white;
+}
+
+.note:active .note__header--light {
+    color: white;
+}
+
+.note__header--dark {
+    color: white;
+}
+
+/* h6.note__header {
+    color: #FFFFFF;
+} */
+
 .note {
     display: flex;
     flex-flow: column;
