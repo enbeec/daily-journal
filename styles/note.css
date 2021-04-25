@@ -1,19 +1,8 @@
-.note__header--light {
-    color: #3f51b5;
+.noteList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
-
-.note:hover .note__header--light {
-    color: white;
-}
-
-.note:active .note__header--light {
-    color: white;
-}
-
-.note__header--dark {
-    color: white;
-}
-
 
 .note {
     display: flex;
@@ -27,8 +16,23 @@
     margin: 1rem;    
 }
 
-.noteList {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+/* make header readable in light mode */
+.note__header--light {
+    color: #3f51b5;
 }
+
+/* keep header readable after hover */
+.note:hover .note__header--light {
+    color: white;
+}
+
+/* keep header readable after active */
+.note:active .note__header--light {
+    color: white;
+}
+
+/* make header readable in dark mode */
+.note__header--dark {
+    color: white;
+}
+
