@@ -1,11 +1,9 @@
-import { getJournalEntries } from './database.js'
+import { getEntries } from "./database.js";
 
 export const Entries = () => {
-    const entries = getJournalEntries()
-    console.log(entries)
+    const entries = getEntries()
     // create an empty string to store our output
     let allEntriesAsHTML = "";
-
     for (const entry of entries) {
         // note__header note__header--dark || note__header--light
         allEntriesAsHTML += /*html*/`
@@ -19,7 +17,7 @@ export const Entries = () => {
                 <span>It took: ${entry.timeSpent} minutes</span>
                 <span>${entry.date}</span>
             </div>
-        `
+            `
     }
 
     return allEntriesAsHTML
