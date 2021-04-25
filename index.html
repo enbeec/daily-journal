@@ -22,16 +22,17 @@
 
 	<footer class="pageFooter w3-container centered">
 		Hey, mom and dad! Love you guys <3 </br>
-		<a href="https://github.com/enbeec">My GitHub</a>
-		<button class="darkToggle">Toggle Dark Mode</button>
+			<a href="https://github.com/enbeec">My GitHub</a>
+			<button class="darkToggle">Toggle Dark Mode</button>
 	</footer>
- 
+
 	<script>
 		const makeDarkToggle = () => {
+			// create the dark mode toggle
 			const darkToggle = document.querySelector('.darkToggle');
 			const noteHeaders = document.querySelectorAll('h6.note__header')
 			// const noteHeader = document.querySelector('.note__header')
-			darkToggle.addEventListener('click', function() {
+			darkToggle.addEventListener('click', function () {
 				document.body.classList.toggle('w3-theme-dark');
 				for (const h of noteHeaders) {
 					h.classList.toggle('note__header--dark')

@@ -1,7 +1,8 @@
 import { getJournalEntries } from './database.js'
 
 export const Entries = () => {
-    const entries = getJournalEntries();
+    const entries = getJournalEntries()
+    console.log(entries)
     // create an empty string to store our output
     let allEntriesAsHTML = "";
 
