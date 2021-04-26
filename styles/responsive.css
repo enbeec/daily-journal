@@ -1,3 +1,4 @@
+/*QUESTION: is there a better way to recognize a mobile device? */
 @media (max-width: 962px) {
 	.noteList {
 		flex-direction: column;

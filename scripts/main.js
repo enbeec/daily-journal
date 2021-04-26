@@ -10,5 +10,5 @@ const render = () => {
 // render when notified state has changed
 document.addEventListener("stateChanged", () => render())
 
-// fetch data
+// QUESTION: is this a good place for this? I feel like it's fine given how simple the application is
 fetchData()
