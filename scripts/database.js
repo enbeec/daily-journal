@@ -9,7 +9,9 @@ export const fetchData = () => {
                 ${reason}
                 `)
 
+            // QUESTION: is this hacky?
             let obj = {}
+            // if we don't get any data, make the next step return the embedded entries
             obj.json = () => embeddedEntries
 
             return obj
@@ -29,6 +31,8 @@ export const getEntries = () => {
     return [...database.entries]
 }
 
+// QUESTION: what if I just moved this into the database object? Or is this the kind of thing I should be ready to get rid of ASAP
+//      I only really use it for UI testing....
 const embeddedEntries = [
     {
         "id": 1,

@@ -1,4 +1,5 @@
 export const JournalForm = () => {
+    // QUESTION: this seems like a lot of tags... is this a lot of tags?
     return /*html*/`
     <fieldset class="fieldContainer w3-border-theme bottomSpace">
         <label for="entryDate">

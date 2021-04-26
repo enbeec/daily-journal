@@ -3,10 +3,9 @@ import { getEntries } from "./database.js";
 
 export const Entries = () => {
     const entries = getEntries()
-    // create an empty string to store our output
     let allEntriesAsHTML = "";
+
     for (const entry of entries) {
-        // note__header note__header--dark || note__header--light
         allEntriesAsHTML += /*html*/`
             <div class="w3-card w3-text-theme w3-hover-theme note">
                 <h6 class="note__header--dark || note__header--light note__header" style="text-align: center;">

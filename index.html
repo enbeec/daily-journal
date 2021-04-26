@@ -11,6 +11,7 @@
 	<title>Daily Journal</title>
 </head>
 
+// QUESTION: what... exactly am I doing here? I got it to work but it's weird in the debugger.
 <body onload="makeDarkToggle()" class="w3-theme-dark || w3-theme-light bodyodyody">
 	<header class="pageHeader w3-container centered bottomSpace">
 		Val Currie's
@@ -27,8 +28,8 @@
 	</footer>
 
 	<script>
+		// QUESTION: should this be moved into the rest of the scripts?
 		const makeDarkToggle = () => {
-			// create the dark mode toggle
 			const darkToggle = document.querySelector('.darkToggle');
 			const noteHeaders = document.querySelectorAll('h6.note__header')
 			// const noteHeader = document.querySelector('.note__header')
