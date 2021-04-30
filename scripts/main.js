@@ -3,12 +3,7 @@ import { fetchData, getEntries } from "./database.js";
 
 const container = document.querySelector(".container");
 
-// QUESTION: go over this -- I'm not clear on how the DOM updates when I re-render
-//  -- does it clobber what's there?
-// so would I need to recreate this on every render??
-//  -- looks like no: I added a wrapper for render() to window, 
-//      forced rendering in the console and then tried
-//      my toggle again and it works!
+// DARKTOGGLE
 document.querySelector('.darkToggle').addEventListener(
     'click',
     () => {
@@ -18,19 +13,14 @@ document.querySelector('.darkToggle').addEventListener(
         for (const h of noteHeaders) {
             h.classList.toggle('note__header--dark')
         }
-    })
+    }
+)
 
 const render = () => {
     // fetch new data before you render
     fetchData().then(() => {
         container.innerHTML = DailyJournal()
     })
-}
-
-// access render function in console
-window.renderFunc = () => {
-    render()
-    return 'success'
 }
 
 // render when notified state has changed (usually after a successful POST)
