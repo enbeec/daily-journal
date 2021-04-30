@@ -17,22 +17,22 @@
 }
 
 /* make header readable in light mode */
-.note__header--light {
+.note__header-light {
     color: #3f51b5;
 }
 
 /* keep header readable after hover */
-.note:hover .note__header--light {
+.note:hover .note__header-light {
     color: white;
 }
 
 /* keep header readable after active */
-.note:active .note__header--light {
+.note:active .note__header-light {
     color: white;
 }
 
 /* make header readable in dark mode */
-.note__header--dark {
+.note__header-dark {
     color: white;
 }
 
