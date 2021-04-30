@@ -1,14 +1,12 @@
 import { getEntries } from "./database.js";
 
-
 export const Entries = () => {
     const entries = getEntries()
-    let allEntriesAsHTML = "";
-
+    let allEntriesAsHTML = ""
     for (const entry of entries) {
         allEntriesAsHTML += /*html*/`
             <div class="w3-card w3-text-theme w3-hover-theme note">
-                <h6 class="note__header note__header--dark || note__header--light" style="text-align: center;">
+                <h6 class="note__header note__header-dark" style="text-align: center;"> <!-- DARKTOGGLE -->
                     <span><b>Subject: </b></span>
                     <span><u>${entry.subject}</u></span>
                 </h6>

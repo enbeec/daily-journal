@@ -4,24 +4,17 @@ const database = {
 
 export const fetchData = () => {
     return fetch("http://localhost:8088/entries")
-        // QUESTION: is this a good use for the catch method?
-        // maybe capture and logic around status from result in a then() instead
-        .catch(reason => {
-            console.log(`database.js -- fetchData
-                ${reason}
-                `)
-
-            let obj = {}
-            // if we don't get any data, make the next step return the embedded entries
-            obj.json = () => embeddedEntries
-
-            return obj
-        })
         .then(res => {
             return res.json()
         })
         .then(entries => {
             database.entries = entries
+        })
+        .catch(reason => {
+            console.log(`database.js -- fetchData
+                ${reason}
+                `)
+            database.entries = embeddedEntries
         })
 }
 
