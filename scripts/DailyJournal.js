@@ -1,8 +1,8 @@
-import { Entries } from './Entries.js'
-import { JournalForm } from './JournalForm.js'
+import { Entries } from "./Entries.js";
+import { JournalForm } from "./JournalForm.js";
 
 export const DailyJournal = () => {
-    return /*html*/`
+  return /*html*/ `
 	<header class="pageHeader w3-container centered bottomSpace">
 		Val Currie's
 		<h1>Daily Journal</h1>
@@ -11,11 +11,11 @@ export const DailyJournal = () => {
 
 	<main class="w3-container">
 		<form class="entryForm w3-card w3-container" action="">
-            ${JournalForm()}
+            ${JournalFormHTML()}
 		</form>
 
         <div class="noteList">
-            ${Entries()}
+            ${EntriesHTML()}
         </div>
 		<aside class="search w3-container"></aside>
     
@@ -26,5 +26,5 @@ export const DailyJournal = () => {
 			<a href="https://github.com/enbeec">My GitHub</a>
 			<button class="darkToggle">Toggle Dark Mode</button> <!-- DARKTOGGLE -->
 	</footer>
-    `
-}
+    `;
+};

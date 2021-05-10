@@ -1,10 +1,10 @@
 import { getEntries } from "./database.js";
 
-export const Entries = () => {
-    const entries = getEntries()
-    let allEntriesAsHTML = ""
-    for (const entry of entries) {
-        allEntriesAsHTML += /*html*/`
+export const EntriesHTML = () => {
+  const entries = getEntries();
+  let allEntriesAsHTML = "";
+  for (const entry of entries) {
+    allEntriesAsHTML += /*html*/ `
             <div class="w3-card w3-text-theme w3-hover-theme note">
                 <h6 class="note__header note__header-dark" style="text-align: center;"> <!-- DARKTOGGLE -->
                     <span><b>Subject: </b></span>
@@ -15,8 +15,8 @@ export const Entries = () => {
                 <span>It took: ${entry.timeSpent} minutes</span>
                 <span>${entry.date}</span>
             </div>
-            `
-    }
+            `;
+  }
 
-    return allEntriesAsHTML
-}
+  return allEntriesAsHTML;
+};

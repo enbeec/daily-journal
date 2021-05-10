@@ -1,6 +1,6 @@
-export const JournalForm = () => {
-    // QUESTION: this seems like a lot of tags... is this a lot of tags?
-    return /*html*/`
+export const JournalFormHTML = () => {
+  // QUESTION: this seems like a lot of tags... is this a lot of tags?
+  return /*html*/ `
     <fieldset class="fieldContainer w3-border-theme bottomSpace">
         <label for="entryDate">
             Date
@@ -30,7 +30,13 @@ export const JournalForm = () => {
             <option value="Confused">Confused</option>
         </select>
     </fieldset>
-    <button class="bottomSpace">
+    <button class="submitButton bottomSpace">
         Record Journal Entry
-    </button>`
-}
+    </button>`;
+};
+
+export const makeSubmitButton = () => {
+  document
+    .querySelector(".submitButton")
+    .addEventListener("click", (event) => {});
+};

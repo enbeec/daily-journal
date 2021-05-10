@@ -1,38 +1,37 @@
 .noteList {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .note {
-    display: flex;
-    flex-flow: column;
-    padding: 1.5rem;
-    margin: auto;
-    /* probably should move these to a parent of note */
-    max-width: 30%;
-    flex-basis: 30%;
-    flex-grow: 1;
-    margin: 1rem;    
+  display: flex;
+  flex-flow: column;
+  padding: 1.5rem;
+  margin: auto;
+  /* probably should move these to a parent of note */
+  max-width: 30%;
+  flex-basis: 30%;
+  flex-grow: 1;
+  margin: 1rem;
 }
 
 /* make header readable in light mode */
 .note__header-light {
-    color: #3f51b5;
+  color: #3f51b5;
 }
 
 /* keep header readable after hover */
 .note:hover .note__header-light {
-    color: white;
+  color: white;
 }
 
 /* keep header readable after active */
 .note:active .note__header-light {
-    color: white;
+  color: white;
 }
 
 /* make header readable in dark mode */
 .note__header-dark {
-    color: white;
+  color: white;
 }
-
