@@ -1,4 +1,4 @@
-import { getEntries } from "./database.js";
+import { getEntries } from "./dataAccess.js";
 
 export const EntriesHTML = () => {
   const entries = getEntries();
@@ -20,3 +20,10 @@ export const EntriesHTML = () => {
 
   return allEntriesAsHTML;
 };
+
+const moods = [
+  {
+    id: 1,
+    label: "happy",
+  },
+];

@@ -1,5 +1,6 @@
 import { DailyJournal } from "./DailyJournal.js";
-import { fetchData } from "./database.js";
+import { fetchData } from "./dataAccess.js";
+import { makeSubmitButton } from "./JournalForm.js";
 
 const darkToggleFunc = (event) => {
   const noteHeaders = document.querySelectorAll("h6.note__header");
@@ -20,6 +21,7 @@ const render = () => {
       .querySelector(".darkToggle")
       ?.removeEventListener("click", darkToggleFunc);
     bodyodyody.innerHTML = DailyJournal();
+    makeSubmitButton();
     document
       .querySelector(".darkToggle")
       .addEventListener("click", darkToggleFunc);

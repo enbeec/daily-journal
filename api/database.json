@@ -23,6 +23,13 @@
       "date": "April 15, 2021",
       "feeling": "happy",
       "timeSpent": 2
+    },
+    {
+      "subject": "Javascript",
+      "text": "Today I learned about Application State. This client side state is where recently fetched copies of API data are stored.",
+      "feeling": "Neutral",
+      "date": "2021-05-10",
+      "id": 4
     }
   ]
 }

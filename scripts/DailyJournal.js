@@ -1,5 +1,5 @@
-import { Entries } from "./Entries.js";
-import { JournalForm } from "./JournalForm.js";
+import { EntriesHTML } from "./Entries.js";
+import { JournalFormHTML } from "./JournalForm.js";
 
 export const DailyJournal = () => {
   return /*html*/ `

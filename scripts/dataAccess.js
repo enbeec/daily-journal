@@ -1,4 +1,6 @@
-const database = {
+import { dispatchStateChanged } from "./helpers.js";
+
+const appState = {
   entries: [],
 };
 
@@ -8,13 +10,14 @@ export const fetchData = () => {
       return res.json();
     })
     .then((entries) => {
-      database.entries = entries;
+      appState.entries = entries;
     })
     .catch((reason) => {
       console.log(`database.js -- fetchData
                 ${reason}
                 `);
-      database.entries = embeddedEntries;
+      // TODO add some kind of message to the user that this happened
+      appState.entries = embeddedEntries;
     });
 };
 
@@ -25,15 +28,11 @@ export const saveJournalEntry = (newEntry) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(newEntry),
-  }).then(document.dispatchEvent(new CustomEvent("stateChanged")));
-};
-
-export const getForm = () => {
-  return [...database.form];
+  }).then(dispatchStateChanged());
 };
 
 export const getEntries = () => {
-  return [...database.entries];
+  return [...appState.entries];
 };
 
 const embeddedEntries = [
@@ -64,7 +63,7 @@ const embeddedEntries = [
     timeSpent: 2,
   },
   {
-    id: 5,
+    id: 4,
     subject: "just so you know...",
     text:
       "I couldn't find my external entries. You're currently looking at the default, embedded entries used for frontend testing.",
