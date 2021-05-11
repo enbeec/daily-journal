@@ -4,6 +4,8 @@ const appState = {
   entries: [],
 };
 
+export const entriesRaw = () => appState.entries.map((e) => ({ ...e }));
+
 export const fetchData = () => {
   return fetch("http://localhost:8081/entries")
     .then((res) => {
@@ -31,10 +33,6 @@ export const saveJournalEntry = (newEntry) => {
   }).then(dispatchStateChanged());
 };
 
-export const getEntries = () => {
-  return [...appState.entries];
-};
-
 const embeddedEntries = [
   {
     id: 1,
@@ -42,7 +40,7 @@ const embeddedEntries = [
     text:
       "Declare objects with curly braces. Declare arrays with square brackets.",
     date: "April 15, 2021",
-    feeling: "happy",
+    mood: "happy",
     timeSpent: 15,
   },
   {
@@ -51,7 +49,7 @@ const embeddedEntries = [
     text:
       "Usually this means whatever you declare can't change -- the exception is when it is a reference to an object or array, which remain mutable.",
     date: "April 15, 2021",
-    feeling: "ok",
+    mood: "ok",
     timeSpent: 5,
   },
   {
@@ -59,7 +57,7 @@ const embeddedEntries = [
     subject: "javascript arrays all have a push() method",
     text: "So myArray.push(thing) would add thing to the end of myArray",
     date: "April 15, 2021",
-    feeling: "happy",
+    mood: "happy",
     timeSpent: 2,
   },
   {
@@ -68,7 +66,7 @@ const embeddedEntries = [
     text:
       "I couldn't find my external entries. You're currently looking at the default, embedded entries used for frontend testing.",
     date: "April 25, 2021",
-    feeling: "sad",
+    mood: "sad",
     timeSpent: 80,
   },
 ];
