@@ -28,3 +28,16 @@ export const DailyJournal = () => {
 	</footer>
     `;
 };
+
+export const darkToggleFunc = (event) => {
+  // toggle body class
+  document.body.classList.toggle("w3-theme-dark");
+  document.body.classList.toggle("w3-theme-light");
+
+  // toggle notes classes
+  const noteHeaders = document.querySelectorAll("h6.note__header");
+  noteHeaders.forEach((h) => {
+    h.classList.toggle("note__header-dark");
+    h.classList.toggle("note__header-light");
+  });
+};

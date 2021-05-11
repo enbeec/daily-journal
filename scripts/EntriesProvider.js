@@ -2,7 +2,7 @@ import { entriesRaw } from "./dataAccess.js";
 
 export const getEntries = () => {
   // replace mood ids with something we can print
-  return rawEntries.map((entry) => {
+  return entriesRaw().map((entry) => {
     // first find our mood given the id from the entry object
     const mood = moods.find((m) => m.id === entry.id);
     // if the entry has an emoji, make sure to include the whole mood in the entry

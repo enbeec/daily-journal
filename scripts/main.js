@@ -1,34 +1,38 @@
-import { DailyJournal } from "./DailyJournal.js";
+import { DailyJournal, darkToggleFunc } from "./DailyJournal.js";
 import { fetchData } from "./dataAccess.js";
-import { makeSubmitButton } from "./JournalForm.js";
+import { submitButtonFunc } from "./JournalForm.js";
 
-const darkToggleFunc = (event) => {
-  const noteHeaders = document.querySelectorAll("h6.note__header");
-  document.body.classList.toggle("w3-theme-dark");
-  document.body.classList.toggle("w3-theme-light");
-  for (const h of noteHeaders) {
-    h.classList.toggle("note__header-dark");
-    h.classList.toggle("note__header-light");
-  }
+const bodyodyody = document.querySelector(".bodyodyody");
+
+const removeListeners = () => {
+  document
+    .querySelector(".darkToggle")
+    ?.removeEventListener("click", darkToggleFunc);
+  document
+    .querySelector(".submitButton")
+    ?.removeEventListener("click", submitButtonFunc);
 };
 
-// render when notified state has changed (usually after a successful POST)
-const bodyodyody = document.querySelector(".bodyodyody");
+const addListeners = () => {
+  document
+    .querySelector(".darkToggle")
+    .addEventListener("click", darkToggleFunc);
+  document
+    .querySelector(".submitButton")
+    .addEventListener("click", submitButtonFunc);
+};
+
 const render = () => {
   // fetch new data before you render
   fetchData().then(() => {
-    document
-      .querySelector(".darkToggle")
-      ?.removeEventListener("click", darkToggleFunc);
+    removeListeners();
     bodyodyody.innerHTML = DailyJournal();
-    makeSubmitButton();
-    document
-      .querySelector(".darkToggle")
-      .addEventListener("click", darkToggleFunc);
+    addListeners();
   });
 };
 
-// register render on
-document.addEventListener("stateChanged", () => render());
-// intial render triggers the fetch
+// intial render triggers the first fetch
 render();
+
+// render any time the state changes
+document.addEventListener("stateChanged", () => render());
