@@ -1,4 +1,5 @@
 import { dispatchStateChanged } from "./helpers.js";
+import { builtEntry } from "./EntriesProvider.js";
 
 const appState = {
   entries: [],
@@ -23,13 +24,13 @@ export const fetchData = () => {
     });
 };
 
-export const saveJournalEntry = (newEntry) => {
+export const postEntry = () => {
   return fetch("http://localhost:8081/entries", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(newEntry),
+    body: JSON.stringify(builtEntry()),
   }).then(dispatchStateChanged());
 };
 

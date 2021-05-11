@@ -1,5 +1,5 @@
-import { saveJournalEntry } from "./dataAccess.js";
-import { getMoods } from "./EntriesProvider.js";
+import { getMoods, buildEntry } from "./EntriesProvider.js";
+import { postEntry } from "./dataAccess.js";
 
 export const submitButtonFunc = (event) => {
   const error = buildEntry(

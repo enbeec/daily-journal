@@ -4,7 +4,7 @@ export const getEntries = () => {
   // replace mood ids with something we can print
   return entriesRaw().map((entry) => {
     // first find our mood given the id from the entry object
-    const mood = moods.find((m) => m.id === entry.id);
+    const mood = moods.find((m) => m.id === entry.mood);
     // if the entry has an emoji, make sure to include the whole mood in the entry
     entry.mood = "emoji" in mood ? mood : mood.label;
     return entry;
@@ -12,6 +12,8 @@ export const getEntries = () => {
 };
 
 export const getMoods = () => moods.map((m) => ({ ...m }));
+
+export const builtEntry = () => ({ ...entryBuilder });
 
 export const buildEntry = (subject, text, mood, date, timeSpent) => {
   if (!subject || !text || !mood || !date || !timeSpent) {
