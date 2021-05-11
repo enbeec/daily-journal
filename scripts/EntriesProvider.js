@@ -10,6 +10,7 @@ export const getEntries = () => {
     return entry;
   });
 };
+
 export const getMoods = () => moods.map((m) => ({ ...m }));
 
 export const buildEntry = (subject, text, mood, date, timeSpent) => {

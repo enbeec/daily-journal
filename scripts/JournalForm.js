@@ -1,4 +1,5 @@
 import { saveJournalEntry } from "./dataAccess.js";
+import { getMoods } from "./EntriesProvider.js";
 
 export const submitButtonFunc = (event) => {
   const error = buildEntry(
@@ -44,14 +45,22 @@ export const JournalFormHTML = () => {
                 Mood for the Day
             </label>
             <select id="entryMood" name="entryMood" class="entryForm__mood">
-                <option value="Neutral" selected>Neutral</option>
-                <option value="Bad">Bad</option>
-                <option value="Good">Good</option>
-                <option value="Confused">Confused</option>
+                ${MoodsHTML()}
             </select>
         </fieldset>
     </div>
     <button id="submitButton" class="submitButton bottomSpace">
         Record Journal Entry
     </button>`;
+};
+
+const MoodsHTML = () => {
+  return getMoods()
+    .map(
+      (m, index) =>
+        /*html*/ `<option ${m.label === "neutral" ? "selected" : ""} value="${
+          m.label
+        }"> ${m.label} </option>`
+    )
+    .join("");
 };
