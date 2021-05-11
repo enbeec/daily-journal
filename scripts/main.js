@@ -15,10 +15,10 @@ const removeListeners = () => {
 
 const addListeners = () => {
   document
-    .querySelector(".darkToggle")
+    .querySelector("#darkToggle")
     .addEventListener("click", darkToggleFunc);
   document
-    .querySelector(".submitButton")
+    .querySelector("#submitButton")
     .addEventListener("click", submitButtonFunc);
 };
 

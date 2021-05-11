@@ -24,7 +24,7 @@ export const DailyJournal = () => {
 	<footer class="pageFooter w3-container centered">
 		Hey, mom and dad! Love you guys <3 </br>
 			<a href="https://github.com/enbeec">My GitHub</a>
-			<button class="darkToggle">Toggle Dark Mode</button> <!-- DARKTOGGLE -->
+			<button id="darkToggle">Toggle Dark Mode</button> <!-- DARKTOGGLE -->
 	</footer>
     `;
 };
